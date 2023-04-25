@@ -9,7 +9,22 @@
 
       
     });
-    
+    const quienes = document.querySelector('#quienes');
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  const seccionPosicion = quienes.getBoundingClientRect().top;
+  const scrollPosicion = window.pageYOffset;
+
+  if (scrollPosicion > seccionPosicion) {
+    navbar.classList.remove('bg-transparent');
+    navbar.classList.add('bg-dark');
+  } else {
+    navbar.classList.remove('bg-dark');
+    navbar.classList.add('bg-transparent');
+  }
+});
+
   });
   console.log()
   $(document).ready(function() {
